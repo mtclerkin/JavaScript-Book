@@ -11,4 +11,4 @@ let foo = 'bar';
 
 console.log(foo);
 
-//Foo=qux; it was first initialized OUTSIDE the block. 
+//Foo=bar; it was first initialized OUTSIDE the block. 
