@@ -1,6 +1,6 @@
 # JavaScript Preparations
 
-### Style Guidelines 
+### Style Guidelines
 
   - Set your text editor to use space characters—not tabs—for indentation. The editor should also insert spaces if you press the "tab" key on your keyboard.
 
