@@ -24,3 +24,25 @@ let
           price = 350; 
           console.log (price) // returns 350
 ```
+
+const
+- variable that is constant and cannot be reassigned; must be assigned a value when declared. If not, a SyntaxError is returned. 
+
+## Variable Scope   
+A variable's scope determines where it is available in a program. The location where you declare a variable determines its scope. In JavaScript, variables declared with the let or const keywords have block scope. A block is a related set of JavaScript statements and expressions between a pair of opening and closing curly braces.
+```js
+          {
+            // this is a block
+            let foo = 42;
+            console.log(foo);
+          }
+
+          if (answer === 'yes') {
+            // this is a block
+            console.log('yes');
+          } else {
+            // so is this
+            console.log('nope');
+          }
+```
+
