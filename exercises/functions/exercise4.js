@@ -10,3 +10,6 @@ function scream(words) {
 }
 
 scream('Yipeee');
+
+// It doesn't log anything, as return terminates the function; if "return" is removed
+// "Yipeee!!!!" is logged 
