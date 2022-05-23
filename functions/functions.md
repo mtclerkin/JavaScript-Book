@@ -152,3 +152,14 @@ Looks very similar to function declaration; however, we are saving it to a varia
           console.log ('Level: ' + game.level);
           console.log("Score: " + game.score);
 ```
+## Call Stack
+The call stack is like a to do list of function invocations; it is an ordered set of stack frames 
+
+Last in, First Out structure
+- analogy: pile of books 
+- Whenever you invoke a function, the details of the function invocation are saved to the top of the stack (pushed to the top) (AKA:most recently invoked function is on the top of the stack )
+- Whenever a function returns, the information about the invocation is taken off the top of the stack (popped off the top) 
+- The bottom of the stack is the first function invoked
+- The stack is processed from top to bottom 
+
+Helpful video: https://www.youtube.com/watch?v=W8AeMrVtFLY
