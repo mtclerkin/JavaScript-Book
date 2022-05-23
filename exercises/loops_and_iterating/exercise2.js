@@ -25,3 +25,13 @@ console.log(factorial(7));     // => 5040
 console.log(factorial(8));     // => 40320
 
 */
+
+function factorial(n) {
+  let result = 1;
+  for (let counter = n; counter > 0; counter -= 1) {
+    result *= counter;
+  }
+  return result; 
+}
+
+console.log(factorial(3));

@@ -15,7 +15,7 @@ let result = randomNumberBetween(1, 6);
 tries += 1;
 
 while (result <= 2) {
-  result = randomNumberBetween(1, 6);
+  let result = randomNumberBetween(1, 6);
   tries += 1;
 }
 

@@ -7,11 +7,11 @@ The following code causes an infinite loop (a loop that never stops iterating). 
 
 let counter = 0;
 
-while (counter = 1) {
+while (counter === 0) {
   console.log(counter);
   counter += 1;
 
-  if (counter > 2) {
-    break;
-  }
+  // if (counter > 2) {
+  //   break;
+  // }
 }
