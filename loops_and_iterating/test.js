@@ -1,10 +1,22 @@
-let array = [3, 1, 5, 9, 2, 6, 4, 7];
-let indexOfFive = -1;
+// Write a function that checks whether a string is empty or not. For example:
 
-for (let i = 0; i < array.length; i += 1) {
-  if (array[i] === 5) {
-    indexOfFive = i;
-  }
+//isBlank('mars'); // false
+// isBlank('  ');   // false
+// isBlank('');     // true
+
+// function isBlank(string) {
+//   if (string === "") {
+//     console.log("It's blank.");
+//   } else {
+//     console.log(`It's not blank. It says ${string}!`)
+//   }
+// }
+
+// isBlank("");
+
+
+function isBlank2(string) {
+  return (string.length === 0)
 }
 
-console.log(indexOfFive);
+console.log(isBlank2("Maggie"));

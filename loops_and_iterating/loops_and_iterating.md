@@ -48,7 +48,7 @@ When you run the code above in a browser, it displays a <code>Do you want to do 
 Notice how <code>while</code> and the condition are now at the end of the loop. Since the test occurs at the end of the loop, the loop always executes at least once.
 
 ## For Loops
-A for loop combines variable initialization (start), a loop condition (stop), and the variable increment/decrement (step/move forward) expression all on the same line:
+A for loop combines variable initialization (start), a loop condition(stops when condition is no longer true), and the variable increment/decrement (step/move forward) expression all on the same line:
 ```js
 let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
 let upperNames = [];
@@ -64,7 +64,7 @@ console.log(upperNames); //['CHRIS', 'KEVIN', 'NAVEED', 'PETE', 'VICTOR']
 ## Controlling Loops 
 JavaScript uses the keywords <code>continue</code> and <code>break</code> to provide more control over loops. <code>continue</code> lets you start a new iteration of the loop, while <code>break</code> lets you terminate a loop early.
 
-<code>continue</code>
+### <code>continue</code>
 Let's continue working with the names program. Suppose we want all the uppercase names in our upperNames array except 'Naveed'. The <code>continue</code> statement can help us do that. When a loop encounters the <code>continue</code> keyword, it skips running the rest of the block and jumps ahead to the next iteration. In this example, we tell the loop to ignore 'Naveed' and skip to the next iteration without adding 'NAVEED' to upperNames.
 
 
@@ -99,6 +99,40 @@ for (let i = 0; i < array.length; i += 1) {
 
 console.log(indexOfFive);
 ``` 
+
 The break statement on line 7 tells JavaScript to terminate the loop once we find the desired element.
 
+## Array Itteration
+### <code>forEach</code>
+If you have an array of names that you want to display on the console, one per line, you can do that without using a loop structure. One other way is to use the built-in forEach method for arrays. 
+
+```js
+let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+
+names.forEach(function(name) {
+  console.log(name);
+});
+```
+
+In the code above, we're passing the anonymous function as an argument to forEach. When you pass a function as an argument to another function, that other function can call the function represented by the argument. That's what forEach does, and it's why this code is useful. As its name suggests, forEach loops through each element in an array, in sequence, starting with the first element. For each name, forEach invokes the anonymous function with the name as an argument. The anonymous function can do whatever it needs to do with the argument. In this case, it merely logs the name.
+
+## Recursion  
+Recursive functions are functions that call themselves. Such code doesn't look much like a loop, but there's a close relationship between loops and recursion. 
+
+```js
+1>function doubler(number) {
+2>  console.log(number);
+3>
+4>  if (number <= 50) {
+5>    doubler(number * 2);
+6>  } 
+7>}
+8>
+9>doubler(70); // => 5
+              // => 10
+              // => 20
+              // => 40
+              // => 80
+```
+Our <code>doubler</code> function code calls itself on line 5. Each invocation of doubler logs a new number, then calls itself with a new value twice that of the input number. To make sure the "loop" stops, we skip the recursive call when the number is greater than 50.
 
